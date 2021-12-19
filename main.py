@@ -34,15 +34,10 @@ def get_shop_list_by_dishes(dishes, person_count):
               doct["measure"] = meas
               doct['quantity'] = quant
             elif key3 == 'quantity':
-              quant = key2[key3]*person_count
+              quant = int(key2[key3])*person_count
           dict[name_ing] = doct
   return dict
 
-
-
-
-
 #result = read_txt('recipes.txt')
-
 
 print(get_shop_list_by_dishes(['Запеченный картофель', 'Омлет'], 2 ))
